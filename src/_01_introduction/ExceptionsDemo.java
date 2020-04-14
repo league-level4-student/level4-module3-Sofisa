@@ -1,5 +1,7 @@
 package _01_introduction;
 
+import javax.swing.undo.CannotUndoException;
+
 public class ExceptionsDemo {
 	public static void main(String[] args) {
 		// Exceptions are ways to allow your program to continue running 
@@ -16,11 +18,26 @@ public class ExceptionsDemo {
 		//    In the catch block, put a print statement so you know
 		//    if the code is being ran.
 		
+		try {testMethod1(4);}
+		catch (Exception ex) {
+			System.out.println("hello");
+			
+			// TODO: handle exception
+		}
+		
 		// 2. Now call testMethod1 with a value greater than 5. 
 		//    Running your program should not print the statement
 		//    in the catch block.
 		//    You can use the Exception class's printStackTrace() method
 		//    to print a list of methods that are currently in scope.
+		try {testMethod1(6);}
+		catch (Exception ex) {
+			System.out.println("hello");
+			
+			// TODO: handle exception
+		}
+		
+		
 		
 		// 3. Create a new class called CustomException that extends Exception.
 		//    Add a void method called terminate that simply calls System.exit(0);
